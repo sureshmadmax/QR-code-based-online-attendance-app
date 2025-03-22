@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Enter Your Details</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; background: #f9f9f9; padding: 50px; }
+        form { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 300px; margin: auto; }
+        input { width: 90%; padding: 10px; margin: 10px 0; }
+        button { padding: 10px 20px; background: blue; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <h2>Mark Attendance</h2>
+        <input type="text" name="name" placeholder="Enter Name" required>
+        <input type="text" name="roll_number" placeholder="Enter Roll Number" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
